@@ -34,15 +34,26 @@ h1 {
 
 /* Slide 1 */
 .factory-section {
-  border: 1px solid #000;
-  background-color: #f8eee1;
-  display: none;
+  position: relative;
+  overflow: hidden;
+
+  /* display: none;
   visibility: hidden;
-  opacity: 0;
+  opacity: 0; */
 }
 
 .container {
+  position: absolute;
+  top: 0;
   height: 100%;
+  background-color: #f8eee1;
+  border: 1px solid #000;
+
+  transition: transform 1s;
+}
+
+.container:last-child {
+  transform: translateX(0%);
 }
 
 .section-header {
